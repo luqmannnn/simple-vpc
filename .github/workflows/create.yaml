@@ -1,4 +1,4 @@
-name: Create VPC
+name: Create VPC - ce11-tf-vpc
 
 on:
   schedule:
