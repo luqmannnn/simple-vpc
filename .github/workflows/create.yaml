@@ -1,0 +1,27 @@
+name: Create VPC
+
+on:
+  schedule:
+    - cron: "0 16 * * *" # Runs daily at midnight SG Time
+    - cron: "0 1 * * *" # Runs everyday at 9am SG Time
+  workflow_dispatch:
+
+jobs:
+  create-vpc:
+    name: Basic TF checks
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v3
+
+    - name: Terraform Init
+      id: init
+      run: terraform init
+
+    - name: Terraform Apply
+      id: apply
+      run: |
+        terraform apply --auto-approve --var="run_number=${{ github.run_number }}"
