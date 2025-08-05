@@ -45,11 +45,3 @@ module "vpc_apsoutheast1" {
     Cohort      = "CE11"
   }
 }
-
-output "vpc_id" {
-  value = module.vpc.vpc_id
-}
-
-output "vpc_arn" {
-  value = module.vpc.vpc_arn
-}
