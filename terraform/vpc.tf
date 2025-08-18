@@ -13,6 +13,8 @@ module "vpc_useast1" {
 
   map_public_ip_on_launch = true
   enable_vpn_gateway      = true
+  enable_nat_gateway      = true
+  one_nat_gateway_per_az  = true
 
   tags = {
     Terraform   = "true"
@@ -37,6 +39,8 @@ module "vpc_apsoutheast1" {
 
   map_public_ip_on_launch = true
   enable_vpn_gateway      = true
+  enable_nat_gateway      = true
+  one_nat_gateway_per_az  = true
 
   tags = {
     Terraform   = "true"
