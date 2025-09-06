@@ -2,8 +2,8 @@ name: Create VPC - ce11-tf-vpc & ce10-tf-vpc
 
 on:
   schedule:
-    - cron: "0 16 * * *" # Runs daily at midnight SG Time
-    - cron: "0 1 * * *" # Runs everyday at 9am SG Time
+    - cron: "0 16 * * 6" # Runs daily at midnight SG Time
+    - cron: "0 1 * * 6" # Runs everyday at 9am SG Time
   workflow_dispatch:
 
 jobs:
